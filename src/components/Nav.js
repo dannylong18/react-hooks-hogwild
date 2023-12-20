@@ -1,7 +1,8 @@
 import React from "react";
 import piggy from "../assets/porco.png";
 
-const Nav = () => {
+const Nav = ({greasedState, setGreasedState}) => {
+
 	return (
 		<div className="navWrapper">
 			<span className="headerText">HogWild</span>
@@ -11,6 +12,11 @@ const Nav = () => {
 			<span className="normalText">
 				A React App for County Fair Hog Fans
 			</span>
+			<div> 
+				<button onClick={() => setGreasedState(!greasedState)}>
+                {greasedState ? "Show All" : "Show Greased Pigs"}
+            	</button>
+			</div>
 		</div>
 	);
 };
